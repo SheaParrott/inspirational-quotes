@@ -1,28 +1,41 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+
+import './App.css'
+import axios from 'axios'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      quote: ''
+    }
+  }
+  newQuote = () => {
+    axios
+      .get(
+        'http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'
+      )
+      .then(Response => {
+        console.log(Response.data)
+        console.log('clicked')
+      })
+  }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <h1>Inspirational Quotes</h1>
+        <button onClick={this.newQuote}>Get New Quote</button>
+        <p>
+          Through meditation and by giving full attention to one thing at a
+          time, we can learn to direct attention where we choose.
+        </p>
+        <a href="http://forismatic.com/en/83102bee09/">
+          <p>-Eknath Easwaran</p>
+        </a>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
