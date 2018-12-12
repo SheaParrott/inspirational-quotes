@@ -2,6 +2,7 @@ html {
   height: 100vh;
   background-image: linear-gradient(rgb(255, 255, 255), rgb(83, 3, 148));
   background-repeat: no-repeat;
+  background-size: cover;
 }
 .App {
   text-align: center;
