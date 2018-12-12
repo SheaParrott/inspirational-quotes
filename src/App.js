@@ -62,6 +62,9 @@ class App extends Component {
           <img src={this.state.image} alt="UnSplash" />
           {this.insertQuote()}
         </main>
+        <footer>
+          <p>&copy; Shea Parrott Copyright Nonesense</p>
+        </footer>
       </div>
     )
   }

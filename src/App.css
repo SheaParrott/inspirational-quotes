@@ -1,6 +1,6 @@
 html {
   height: 100vh;
-  background-image: linear-gradient(rgb(246, 233, 250), rgb(111, 0, 202));
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(83, 3, 148));
   background-repeat: no-repeat;
 }
 .App {
@@ -62,6 +62,18 @@ img {
   margin: 0 auto;
   width: 300px;
 }
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 4%;
+}
+@media (min-width: 380px) {
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 9%;
+  }
+}
 @media (min-width: 760px) {
   h1 {
     font-size: 3rem;
@@ -84,7 +96,13 @@ img {
   .quote h6 {
     width: 600px;
   }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 22%;
+  }
 }
+
 @media (min-width: 1020px) {
   h1 {
     font-size: 4rem;
@@ -106,6 +124,11 @@ img {
   .quote h6 {
     width: 800px;
   }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 24%;
+  }
 }
 @media (min-width: 1279px) {
   h1 {
@@ -121,12 +144,17 @@ img {
     font-size: 1.7rem;
   }
   img {
-    width: 600px;
+    width: 500px;
     border: 1px solid black;
   }
   .quote p,
   .quote h6 {
-    width: 600px;
+    width: 500px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 33%;
   }
 }
 @media (min-width: 1979px) {
@@ -149,5 +177,10 @@ img {
   .quote p,
   .quote h6 {
     width: 900px;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 35%;
   }
 }
